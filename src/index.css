@@ -5,13 +5,20 @@ body {
 }
 
 .app {
-  padding: 15px;
-  width: 60%;
+  padding-top: 16px;
+  width: 90%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .deck {
-  border: 1px solid white;
+  border: 1px solid grey;
+  width: 70%;
+}
+
+.console {
+  float: right;
+  width: 29%;
 }
 
 .well:hover {
