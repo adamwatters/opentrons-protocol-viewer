@@ -3,3 +3,17 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.app {
+  padding: 15px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.deck {
+  border: 1px solid white;
+}
+
+.well:hover {
+  cursor: pointer;
+}
