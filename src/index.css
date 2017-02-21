@@ -21,6 +21,16 @@ body {
   width: 29%;
 }
 
+.console-title {
+  font-size: 22px;
+  padding-bottom: 16px;
+}
+
+.console-section {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .well:hover {
   cursor: pointer;
 }

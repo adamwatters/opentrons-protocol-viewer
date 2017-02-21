@@ -5,8 +5,8 @@ const Deck = ({children, deckDescription}) => {
   const locationMarkers = map(deckDescription.locations, (location, name) => {
     return (
       <g key={name} transform={`translate(${location.x}, ${location.y})`}>
-        <rect width="1" height="6" fill="rgb(0,0,255)" />
-        <rect width="6" height="1" fill="rgb(255,0,00)" />
+        <rect width="1" height="6" fill="grey" />
+        <rect width="6" height="1" fill="grey" />
         <text x="2" y="9" fill="grey" fontSize="8">{name}</text>
       </g>
     )
