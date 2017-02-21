@@ -1,6 +1,6 @@
 # OpenTrons Protocol
 
-## [Demo](https://rawgit.com/adamwatters/opentrons-protocol-viewer/master/build/index.html)
+### [Demo](https://rawgit.com/adamwatters/opentrons-protocol-viewer/master/build/index.html)
 
 ## Notes
 
