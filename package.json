@@ -2,6 +2,7 @@
   "name": "opentrons",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rawgit.com/adamwatters/opentrons-protocol-viewer/master/build/",
   "devDependencies": {
     "enzyme": "^2.7.1",
     "react-addons-test-utils": "^15.4.2",
