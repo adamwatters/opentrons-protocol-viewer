@@ -1,6 +1,21 @@
 # OpenTrons Protocol
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## [Demo](https://rawgit.com/adamwatters/opentrons-protocol-viewer/master/build/index.html)
+
+## Notes
+
+### Purpose:
+- Users should have a visual reference of deck and containers when creating or viewing protocol
+
+### Technical Requirements:
+- Deck components should be flexible => different deck sizes and configurations should be possible
+
+- Container components should be flexible => container renderer should not be tied to existing container descriptions
+
+- App should register and log sequential clicks between container addresses
+
+- App should be able to replay sequence of container addresses
+
 
 ## Available Scripts
 
