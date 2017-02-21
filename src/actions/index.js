@@ -30,7 +30,7 @@ const _startPlay = () => ({
   type: 'START_PLAY'
 })
 
-export const startPlay = () => {
+export const startPlay = (timeBetweenMoves) => {
   let counter = 0;
   return (dispatch, getState) => {
     dispatch(_startPlay());
@@ -43,7 +43,7 @@ export const startPlay = () => {
         counter += 1;
         setTimeout(() => {
           inner();
-        }, 500)
+        }, timeBetweenMoves)
       } else {
         dispatch(stopPlay());
       }

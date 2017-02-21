@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import colors from '../constants/colors'
 
 const Well = ({wellDescription, onClick, id, isOrigin, isDestination}) => {
@@ -13,6 +13,14 @@ const Well = ({wellDescription, onClick, id, isOrigin, isDestination}) => {
         }
       </g>
   )
+}
+
+Well.propTypes = {
+  wellDescription: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  isOrigin: PropTypes.bool.isRequired,
+  isDestination: PropTypes.bool.isRequired,
 }
 
 export default Well;

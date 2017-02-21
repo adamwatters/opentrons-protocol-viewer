@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {map} from 'lodash'
 import containerDescriptions from '../data/containerDescriptions'
@@ -15,6 +15,7 @@ import {
 const Container = ({x, y, type, containerLocation, dispatch, origin, destination, inPlayMode}) => {
   const containerData = containerDescriptions[type];
   const offset = containerData['origin-offset'] || {x: 0, y: 0}
+  const onClick = onClickMaker(dispatch, origin, destination, inPlayMode);
   return (
     <g transform={`translate(${x}, ${y})`}>
       <g transform={`translate(${offset.x}, ${offset.y})`}>
@@ -26,12 +27,22 @@ const Container = ({x, y, type, containerLocation, dispatch, origin, destination
                   isDestination={id === destination}
                   id={id}
                   key={id}
-                  onClick={onClickMaker(dispatch, origin, destination, inPlayMode)}/>
+                  onClick={onClick}/>
           )
         })}
       </g>
     </g>
   )
+}
+
+Container.propTypes = {
+  x: PropTypes.number.isRequired,
+  y: PropTypes.number.isRequired,
+  containerLocation: PropTypes.string.isRequired,
+  dispatch: PropTypes.func.isRequired,
+  origin: PropTypes.string.isRequired,
+  destination: PropTypes.string.isRequired,
+  inPlayMode: PropTypes.bool.isRequired
 }
 
 function onClickMaker(dispatch, origin, destination, inPlayMode) {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import colors from '../constants/colors'
 import {
@@ -24,13 +24,21 @@ const Console = ({origin, destination, transfers, inPlayMode, dispatch}) => {
         })}
       </div>
       {transfers.length ? (
-        <button onClick={inPlayMode ? () => dispatch(stopPlay()) : () => dispatch(startPlay())}>
+        <button onClick={inPlayMode ? () => dispatch(stopPlay()) : () => dispatch(startPlay(500))}>
           {inPlayMode ? 'Stop Protocol' : 'Run Protocol'}
         </button>
       ) : ''
       }
     </div>
   )
+}
+
+Console.propTypes = {
+  origin: PropTypes.string.isRequired,
+  destination: PropTypes.string.isRequired,
+  transfers: PropTypes.array.isRequired,
+  inPlayMode: PropTypes.bool.isRequired,
+  dispatch: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => ({

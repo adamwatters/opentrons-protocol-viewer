@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-const origin = (state = '', action) => {
+export const origin = (state = '', action) => {
   switch (action.type) {
     case 'SET_ORIGIN':
       return action.id
@@ -11,7 +11,7 @@ const origin = (state = '', action) => {
   }
 }
 
-const destination = (state = '', action) => {
+export const destination = (state = '', action) => {
   switch (action.type) {
     case 'SET_DESTINATION':
       return action.id
@@ -22,7 +22,7 @@ const destination = (state = '', action) => {
   }
 }
 
-const transfers = (state = [], action) => {
+export const transfers = (state = [], action) => {
   switch (action.type) {
     case 'COMMIT_TRANSFER':
       return [...state, {origin: action.originId, destination: action.destinationId}]
@@ -31,7 +31,7 @@ const transfers = (state = [], action) => {
   }
 }
 
-const inPlayMode = (state = false, action) => {
+export const inPlayMode = (state = false, action) => {
   switch (action.type) {
     case 'START_PLAY':
       return true

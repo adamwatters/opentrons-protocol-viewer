@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import {map} from 'lodash'
 
 const Deck = ({children, deckDescription}) => {
@@ -17,6 +17,10 @@ const Deck = ({children, deckDescription}) => {
       <g>{children}</g>
     </svg>
   )
+}
+
+Deck.propTypes = {
+  deckDescription: PropTypes.object.isRequired,
 }
 
 export default Deck;

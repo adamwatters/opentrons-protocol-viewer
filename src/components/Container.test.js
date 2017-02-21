@@ -1,8 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Container from './Container';
+import { shallow } from 'enzyme';
+import reducer from '../reducers'
+import { createStore } from 'redux'
+
+const store = createStore(reducer)
 
 test('Container renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Container x={0} y={0} type='tiprack-10ul' location='A1'/>, div);
+  shallow(<Container
+    store={store}
+    x={0} 
+    y={0} 
+    type='tiprack-10ul' 
+    containerLocation='A1'
+    dispatch={()=>{}}
+    origin=''
+    destination=''
+    inPlayMode={false}/>
+  );
 });
